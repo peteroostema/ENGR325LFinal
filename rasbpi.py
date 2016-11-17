@@ -1,22 +1,18 @@
-import RPi.GPIO as GPIO
 import urllib2
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(5,GPIO.OUT)
 true = 1
+status = ''
 while(true):
                 try:
-                        response = urllib2.urlopen('http://192.168.1.8/xampp/IOTautomation/buttonStatus.php')
-                        status = response.read()
-                except urllib2.HTTPError, e:
-                                        print e.code
+                    response = urllib2.urlopen('http://127.0.0.1/xampp/htdocs/dashboard/switch/buttonStatus.php')
+                    status = response.read()
+                except urllib2.HTTPError as e:
+                    print e.code
 
-                except urllib2.URLError, e:
-                                        print e.args
+                except urllib2.URLError as e:
+                    print e.args
 
                 print status
                 if status=='ON':
-                                GPIO.output(5,True)
+                                --GPIO.output(5,True)
                 elif status=='OFF':
-                                GPIO.output(5,False)
-
+                                --GPIO.output(5,False)
