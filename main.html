@@ -1,0 +1,72 @@
+<html>
+<body>
+<title>ENGR-325 Design Project</title>
+<style type="text/css">
+body {
+	background-color: black;
+}
+p {
+	padding: 10px 10px;
+	font-family: "Courier New", "Arial";
+	font-size: 16px;
+	color: white;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    float: center;
+}
+.button:hover {
+    background-color: #3e8e41;
+}
+#off {
+	background-color: #cc0000;
+}
+#off:hover {
+		background-color: #990000;
+}
+h1{
+	font-family: "Arial";
+	color: white;
+	padding-top: 20px;
+	padding-left: 0px;
+}
+td {
+	background-color: #424242;
+	padding: 3px 10px 3px 10px;
+	vertical-align: middle;
+}
+form{
+	padding-left: 0px;
+}
+input {
+    width: 25%;
+		font-size: 16px;
+		padding: 12px 12px 12px 12px;
+}
+</style>
+<h1 align=center>ENGR-325 Final Lab Design Project</h1>
+<table align=center>
+	<tr>
+		<td>
+			<p> LED 1</p>
+		</td>
+		<td style="background-color: #757575">
+			<form action = "button.php" method = "POST">
+				<p align=center>
+				<input type="text" id="time" placeholder="Enter time...">
+				<button class="button" type = "submit" name ="on" id="on">Turn On</button>
+				<button class="button" type = "submit" name = "off" id="off">Turn Off</button>
+			</p>
+			</form>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
