@@ -3,8 +3,10 @@ $file = "buttonStatus.txt";
 $handle = fopen($file,'w+');
 if (isset($_POST['on']))
 {
-$onstring = "ON";
-fwrite($handle,$onstring);
+$time_val = $_POST['time'];
+$onstring = "ON ";
+$writestring = $onstring . $time_val . " 1";
+fwrite($handle,$writestring);
 fclose($handle);
 print "
 <html>
@@ -28,8 +30,10 @@ h2{
 }
 else if(isset($_POST['off']))
 {
-$offstring = "OFF";
-fwrite($handle, $offstring);
+$time_val = $_POST['time'];
+$offstring = "OFF ";
+$writestring = $onstring . $time_val . " 1";
+fwrite($handle,$writestring);
 fclose($handle);
 print "
 <html>
