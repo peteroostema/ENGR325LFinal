@@ -11,6 +11,7 @@ onLength = 0
 while(True):
     time.sleep(1)
     file = open('buttonStatus.txt', 'r+')
+    print(status)
     status = file.readline()
     status.strip()
     words = status.split(' ')
