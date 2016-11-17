@@ -5,7 +5,8 @@ if (isset($_POST['on']))
 {
 $time_val = $_POST['time'];
 $onstring = "ON ";
-$writestring = $onstring . $time_val . " 1 ";
+//$writestring = $onstring . $time_val . " 1 ";
+$writestring = $onstring . " 5" . " 1 ";
 fwrite($handle,$writestring);
 fclose($handle);
 print "
@@ -31,8 +32,8 @@ h2{
 else if(isset($_POST['off']))
 {
 $time_val = $_POST['time'];
-$offstring = "OFF ";
-$writestring = $onstring . $time_val . " 1 ";
+$offstring = "OFF 3 0 ";
+//$writestring = $onstring . $time_val . " 1 ";
 fwrite($handle,$writestring);
 fclose($handle);
 print "
