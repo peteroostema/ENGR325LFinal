@@ -15,15 +15,19 @@ p {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 30px;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: none;
     font-size: 12px;
     cursor: pointer;
     float: center;
+		vertical-align: middle
 }
 .button:hover {
     background-color: #3e8e41;
+}
+.button:active {
+		background-color: #1b5e20;
 }
 #off {
 	background-color: #cc0000;
@@ -48,7 +52,8 @@ form{
 input {
     width: 25%;
 		font-size: 16px;
-		padding: 12px 12px 12px 12px;
+		padding: 10px 10px 10px 10px;
+		vertical-align: middle
 }
 </style>
 <h1 align=center>ENGR-325 Final Lab Design Project</h1>
@@ -60,9 +65,9 @@ input {
 		<td style="background-color: #757575">
 			<form action = "button.php" method = "POST">
 				<p align=center>
-				<input type="text" id="time" placeholder="Enter time...">
-				<button class="button" type = "submit" name ="on" id="on">Turn On</button>
-				<button class="button" type = "submit" name = "off" id="off">Turn Off</button>
+				<input type="text" id="time" placeholder="Time...">
+				<button class="button" type = "submit" name ="on" id="on">On</button>
+				<button class="button" type = "submit" name = "off" id="off">Off</button>
 			</p>
 			</form>
 		</td>
